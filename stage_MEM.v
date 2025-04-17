@@ -2,16 +2,14 @@ module stage_MEM(
     input clk,
     input memwrite,
     input [31:0] aluout,
-    input [31:0] wd,         // dữ liệu cần ghi
-    output [31:0] rd         // dữ liệu đọc ra
+    input [31:0] wd,
+    output [31:0] rd
 );
-
     dmem dmem_inst (
         .clk(clk),
-        .memwrite(memwrite),
+        .we(memwrite), // Đảm bảo tên khớp với cổng 'we' trong dmem.v
         .a(aluout),
         .wd(wd),
         .rd(rd)
     );
-
 endmodule
