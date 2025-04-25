@@ -1,0 +1,47 @@
+# Compile of ALU.v was successful.
+# Compile of ALU_Decoder.v was successful.
+# Compile of Control_Unit_Top.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Instruction_Memory.v was successful.
+# Compile of Main_Decoder.v was successful.
+# Compile of Mux.v was successful.
+# Compile of PC.v was successful.
+# Compile of PC_Adder.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Sign_Extend.v was successful.
+# Compile of Single_Cycle_Top.v was successful.
+# Compile of Single_Cycle_Top_Tb.v was successful.
+# Compile of Main_Decode_tb.v was successful.
+# Compile of Execute_Stage_tb.v was successful.
+# Compile of Instruction_Fetch_Stage_tb.v was successful.
+# Compile of Instruction_Decode_Stage_tb.v was successful.
+# Compile of Control_Unit.v was successful.
+# Compile of Immediate_Extend.v was successful.
+# 19 compiles, 0 failed with no errors.
+vsim -gui work.Execute_Stage_tb
+# vsim -gui work.Execute_Stage_tb 
+# Start time: 07:29:36 on Apr 25,2025
+# Loading work.Execute_Stage_tb
+# Loading work.Mux
+# Loading work.PC_Adder
+# Loading work.ALU
+add wave -position insertpoint sim:/Execute_Stage_tb/*
+run -all
+# Time=0 PC=00000000 RD1=00000000 RD2=00000000 ImmExt=00000000 ALUSrc=0 ALUControl=000 SrcB=00000000 ALUResult=00000000 Zero=1 PCTarget=00000000
+# Time=10 PC=00001000 RD1=0000000a RD2=00000007 ImmExt=00000010 ALUSrc=0 ALUControl=000 SrcB=00000007 ALUResult=00000011 Zero=0 PCTarget=00001010
+# Test 1 Passed
+# Time=20 PC=00002000 RD1=00000008 RD2=00000003 ImmExt=00000004 ALUSrc=1 ALUControl=000 SrcB=00000004 ALUResult=0000000c Zero=0 PCTarget=00002004
+# Test 2 Passed
+# Time=30 PC=00003000 RD1=0000000a RD2=00000004 ImmExt=00000008 ALUSrc=0 ALUControl=001 SrcB=00000004 ALUResult=00000006 Zero=0 PCTarget=00003008
+# Test 3 Passed
+# Time=40 PC=00003000 RD1=00000005 RD2=00000005 ImmExt=00000008 ALUSrc=0 ALUControl=001 SrcB=00000005 ALUResult=00000000 Zero=1 PCTarget=00003008
+# Test 4 Passed
+# Time=50 PC=00001000 RD1=00000000 RD2=00000000 ImmExt=abcde000 ALUSrc=1 ALUControl=100 SrcB=abcde000 ALUResult=abcde000 Zero=0 PCTarget=abcdf000
+# Test 5 (LUI) Passed
+# Time=60 PC=00002000 RD1=00002000 RD2=00000000 ImmExt=01234000 ALUSrc=1 ALUControl=110 SrcB=01234000 ALUResult=01236000 Zero=0 PCTarget=01236000
+# Test 6 (AUIPC) Failed: Expected 0x3234000, got 01236000
+# Simulation completed
+# ** Note: $finish    : C:/Users/Ba Minh/Desktop/KTMT/Execute_Stage_tb.v(143)
+#    Time: 80 ps  Iteration: 0  Instance: /Execute_Stage_tb
+# 1
+# Break in Module Execute_Stage_tb at C:/Users/Ba Minh/Desktop/KTMT/Execute_Stage_tb.v line 143

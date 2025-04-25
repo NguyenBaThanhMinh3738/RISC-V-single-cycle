@@ -1,0 +1,86 @@
+$date
+	Wed Apr 23 22:33:26 2025
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module Main_Decoder_tb $end
+$var reg 7 ! Op [6:0] $end
+$var wire 1 " RegWrite $end
+$var wire 1 # ALUSrc $end
+$var wire 1 $ MemWrite $end
+$var wire 1 % ResultSrc $end
+$var wire 1 & Branch $end
+$var wire 1 ' ImmSrc [1] $end
+$var wire 1 ( ImmSrc [0] $end
+$var wire 1 ) ALUOp [1] $end
+$var wire 1 * ALUOp [0] $end
+
+$scope module dut $end
+$var wire 1 + Op [6] $end
+$var wire 1 , Op [5] $end
+$var wire 1 - Op [4] $end
+$var wire 1 . Op [3] $end
+$var wire 1 / Op [2] $end
+$var wire 1 0 Op [1] $end
+$var wire 1 1 Op [0] $end
+$var wire 1 " RegWrite $end
+$var wire 1 # ALUSrc $end
+$var wire 1 $ MemWrite $end
+$var wire 1 % ResultSrc $end
+$var wire 1 & Branch $end
+$var wire 1 ' ImmSrc [1] $end
+$var wire 1 ( ImmSrc [0] $end
+$var wire 1 ) ALUOp [1] $end
+$var wire 1 * ALUOp [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 !
+1"
+1#
+0$
+1%
+0&
+0(
+0'
+0*
+0)
+11
+10
+0/
+0.
+0-
+0,
+0+
+$end
+#10
+b100011 !
+1,
+0%
+1$
+1(
+0"
+#20
+b110011 !
+1-
+0$
+0#
+0(
+1)
+1"
+#30
+b1100011 !
+0-
+1+
+1&
+1'
+1*
+0)
+0"
